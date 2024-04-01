@@ -1,0 +1,22 @@
+#contact input[type=text],input[type=email], textarea{
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 15px;
+    border: 2px solid purple;
+    accent-color: purple;
+}
+#contact input[type=checkbox]{
+    accent-color: purple;
+    margin-top: 10px;
+}
+#btn-submit{
+    border: none;
+    margin-top: 10px;
+}
+@media screen and (max-width:600px){
+    #formular{
+        text-align: left;
+    }
+}

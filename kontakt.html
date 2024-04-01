@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sme neveľky tím ľudi, ktorý rád vypieka chutne veci. Našou úlohou je zabezpečit vsetckých ľudi dobrým pečivom a za skvelú cenu.">
+    <meta name="keywords" content="Pečivo, Zákusok, Torta, Naša pekáreň">
+    <meta name="author" content="Klinkov Denys">
+    <title>Kontakt - Naša pekáreň</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <!-- logo -->
+        <div>
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo" id="logo">
+            </a>
+        </div>
+        <!-- navigacia -->
+            <nav class="main-nav">
+                <ul class="main-menu" id="main-menu">
+                    <li><a href="./index.html">Domov</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="./qna.html">Otázky</a></li>
+                    <li><a href="./kontakt.html">Kontakt</a></li>
+                </ul>
+                <span class="hamburger" id="hamburger">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </nav>
+    </header>
+    <main>
+        <!-- banner -->
+        <div class="banner">
+            <img src="./img/banner.jpg" alt="banner">
+            <h1>Kontakt</h1>
+        </div>
+        <!-- formular -->
+        <section class="margin-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-50">
+                        <h2>Máte otázky?</h2>
+                        <p>Ak máte otázky, kuknite <b>Q&A</b> stránku, ak nepomohlo - napíšte nám. S radosťou vám pomožeme a odpovieme na akekoľvek otázky. Tým pomožete nám stáť lepšími podníkateľmi a naďalej rozvíjať našu pekáreň</p>
+                        <br>
+                        <p>Taktiež možete napísať nám mejl na <a href="mailto:nasapekaren@gmail.com">nasapekaren@gmail.com</a></p>
+                    </div>
+                    <div class="col-50 text-right" id="formular">
+                        <h2>Napíšte nám</h2>
+                        <form action="thankyou.html" id="contact">
+                          <input type="text" placeholder="Vaše meno" id="meno" required> <br>
+                          <input type="email" placeholder="Vaš email" id="email" required><br>
+                          <textarea placeholder="Vaša sprava" id="sprava" cols="30" rows="10"></textarea><br>
+                          <input type="checkbox" id="suhlas" required>
+                          <label for="suhlas"><i>Súhlasim so spracovaním osobných údajov.</i></label><br>
+                          <input type="submit" value="Odoslať" class="btn" id="btn-submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>  
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row justify-center test">
+                <div class="col-33 text-left">
+                    <h4>Kto sme</h4>
+                    <p>Sme neveľky tím ľudi, ktorý rád vypieka chutne veci. Našou úlohou je zabezpečit vsetckých ľudi dobrým pečivom a za skvelú cenu.</p>
+                </div>
+                <div class="col-33 text-center">
+                    <h4>Kontaktujte nás</h4>
+                    <p><i class="fa fa-envelope"></i><a href="mailto:nasapekaren@gmail.com">nasapekaren@gmail.com</a></p>
+                    <p><i class="fa fa-phone"></i><a href="phoneto:88005553535">88005553535</a></p>
+                </div>
+                <div class="col-33 text-right">
+                    <h4>Ryclé odkazy</h4>
+                    <ul>
+                        <li><p><a href="./index.html">Domov</a></p></li>
+                        <li><p><a href="./menu.html">Menu</a></p></li>
+                        <li><p><a href="./qna.html">Otázky</a></p></li>
+                        <li><p><a href="./kontakt.html">Kontakt</a></p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-100 text-center">Copyright&copy;2023</div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/burger_menu.js"></script> 
+    <script src="./js/formular.js"></script>
+</body>
+</html>

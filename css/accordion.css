@@ -1,0 +1,34 @@
+.accordion-container{
+    width: 100%;
+}
+.question{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0 10px;
+    background-color: #eee;
+    cursor: pointer;
+}
+.question::after{
+    content: "+";
+    margin-left: auto;
+}
+.accordion.active .question, .question:hover{
+    background-color: #cccccc;
+}
+.accordion.active .question::after{
+    content: "-";
+    margin-left: auto;
+}
+.answer{
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s; 
+    padding: 0 10px;
+}
+.accordion.active .answer{
+    height: 80px;
+}

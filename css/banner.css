@@ -1,0 +1,102 @@
+/* styly pre slider */
+.visible-slide{
+    /* toto je slide ktory vidime, ostatne su v overflowe a su schovane */
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+.slides-all{
+/* dlzka je nastavena v 300% v js podla poctu slajdov */
+    height: 100%;
+    display: flex;
+}
+.slide{
+    /* dlzka je nastavena v 33.33% v js podla poctu slajdov*/
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: 0.5s ease;
+}
+.slide h1{
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-shadow: 2px 2px black;
+}
+.slide img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+.prev, .next{
+    user-select: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 50%;
+    transform: translate(0, 50%);
+    color: white;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 18px;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.prev{
+    left: 0%;
+}
+.next{
+    right: 0%;
+}
+/* pre obycajny banner */
+.banner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+.banner img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 70%;
+}
+.banner h1{
+    position: absolute;
+    color: white;
+    left: 10%;
+    text-shadow: 2px 2px black;
+}
+
+@media screen and (max-width:800px){
+    .visible-slide{
+        height: 500px;
+    }
+}
+@media screen and (max-width: 600px){
+    .visible-slide{
+        height: 400px;
+    }
+    .banner img{
+        height: 300px;
+    }
+    .prev, .next{
+        padding: 5px;
+        font-size: 14px;
+        font-weight: medium;
+    }
+}
+@media screen and (max-width:500px) {
+    .visible-slide{
+        max-height: 300px;
+    }
+    .banner img{
+        height: 250px;
+    }
+}

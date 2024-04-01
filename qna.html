@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sme neveľky tím ľudi, ktorý rád vypieka chutne veci. Našou úlohou je zabezpečit vsetckých ľudi dobrým pečivom a za skvelú cenu.">
+    <meta name="keywords" content="Pečivo, Zákusok, Torta, Naša pekáreň">
+    <meta name="author" content="Klinkov Denys">
+    <title>Otázky - Naša pekáreň</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/accordion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <!-- logo -->
+        <div>
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo" id="logo">
+            </a>
+        </div>
+        <!-- navigacia -->
+            <nav class="main-nav">
+                <ul class="main-menu" id="main-menu">
+                    <li><a href="./index.html">Domov</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="./qna.html">Otázky</a></li>
+                    <li><a href="./kontakt.html">Kontakt</a></li>
+                </ul>
+                <span class="hamburger" id="hamburger">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </nav>
+    </header>
+    <main>
+        <!-- banner -->
+        <div class="banner">
+            <img src="./img/banner.jpg" alt="banner">
+            <h1>Q&A</h1>
+        </div>
+        <section class="margin-top">
+            <div class="container">
+                <div class="row">
+                    <h2>Kde vás nájsť? Aké sú ceny? A mnohé iné</h2>
+                </div>
+                <div class="row">
+                    <h3>sa dozviete na tejto stránke</h3>
+                </div>
+                <div class="row">
+                    <!-- accordion -->
+                    <div class="accordion-container margin-top">
+                        <div class="accordion">
+                            <div class="question">Z čoho vyrobene vašé tovare?</div>
+                            <div class="answer"><p>Naše tovare sa pozostávajú z najkvalitnejsich ingridientov. Pšenicu pre muku pestujú najkrajšie farmari. Su odboreny len najlepšie jednotky z najlepšich druhov. Potom muku sťahuju nám, kde naši kuchari sa usilovne snažia piect, aby zostali ste spokojní našim tovarom.</p></div>
+                        </div>
+                        <div class="accordion">
+                            <div class="question">Bude pekáreň v mojom meste?</div>
+                            <div class="answer"><p>Pomaly, ale sa rozširujeme. Zatiaľ sú našé pekarne len v Bratislave a v Nitre</p></div>
+                        </div>
+                        <div class="accordion">
+                            <div class="question">Možem si objednať tortu? A koľko to bude stáť?</div>
+                            <div class="answer"><p>Áno, možete. Približné ceny sú v Menu</p></div>
+                        </div>
+                        <div class="accordion">
+                            <div class="question">V čom tajomstvo chuti?</div>
+                            <div class="answer"><p>V nášej láske :&#41;</p></div>
+                        </div>
+                        <div class="accordion">
+                            <div class="question">Čo ak zostal som nespokojní?</div>
+                            <div class="answer"><p>Je nam veľmi ľuto, napište prosím váš ohlas na naš mejl, aby mohli sme opraviť naše chyby</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row justify-center test">
+                <div class="col-33 text-left">
+                    <h4>Kto sme</h4>
+                    <p>Sme neveľky tím ľudi, ktorý rád vypieka chutne veci. Našou úlohou je zabezpečit vsetckých ľudi dobrým pečivom a za skvelú cenu.</p>
+                </div>
+                <div class="col-33 text-center">
+                    <h4>Kontaktujte nás</h4>
+                    <p><i class="fa fa-envelope"></i><a href="mailto:nasapekaren@gmail.com">nasapekaren@gmail.com</a></p>
+                    <p><i class="fa fa-phone"></i><a href="phoneto:88005553535">88005553535</a></p>
+                </div>
+                <div class="col-33 text-right">
+                    <h4>Ryclé odkazy</h4>
+                    <ul>
+                        <li><p><a href="./index.html">Domov</a></p></li>
+                        <li><p><a href="./menu.html">Menu</a></p></li>
+                        <li><p><a href="./qna.html">Otázky</a></p></li>
+                        <li><p><a href="./kontakt.html">Kontakt</a></p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-100 text-center">Copyright&copy;2023</div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/burger_menu.js"></script>
+    <script src="./js/accordion.js"></script>
+</body>
+</html>
