@@ -1,53 +1,19 @@
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sme neveľky tím ľudi, ktorý rád vypieka chutne veci. Našou úlohou je zabezpečit vsetckých ľudi dobrým pečivom a za skvelú cenu.">
-    <meta name="keywords" content="Pečivo, Zákusok, Torta, Naša pekáreň">
-    <meta name="author" content="Klinkov Denys">
-    <title>Naša pekáreň</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/banner.css">
-    <link rel="stylesheet" href="./css/navigation.css">
-    <link rel="stylesheet" href="./css/pop-up-image.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <header>
-        <!-- logo -->
-        <div>
-            <a href="index.html">
-                <img src="img/logo.png" alt="logo" id="logo">
-            </a>
-        </div>
-        <!-- navigacia -->
-            <nav class="main-nav">
-                <ul class="main-menu" id="main-menu">
-                    <li><a href="./index.html">Domov</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="./qna.html">Otázky</a></li>
-                    <li><a href="./kontakt.html">Kontakt</a></li>
-                </ul>
-                <span class="hamburger" id="hamburger">
-                    <i class="fa fa-bars"></i>
-                </span>
-            </nav>
-    </header>
-    <main>
+<?php
+    include_once('./partials/header.php');
+?>
         <!-- slider -->
         <div class="visible-slide">
             <div class="slides-all"> 
                 <div class="slide first-slide">
-                    <img src="./img/slider1.jpg" alt="banner">
+                    <img src="../img/slider1.jpg" alt="banner">
                     <h1 class="text-center">Ponúkame najčerstvejšie pečivo na Slovensku</h1>
                 </div>
                 <div class="slide">
-                    <img src="./img/slider2.jpg" alt="banner">
+                    <img src="../img/slider2.jpg" alt="banner">
                     <h1 class="text-center">Novoročné zľavy až 70%</h1>
                 </div>
                 <div class="slide">
-                    <img src="./img/slider3.jpg" alt="banner">
+                    <img src="../img/slider3.jpg" alt="banner">
                     <h1 class="text-center">Vychutnaj si aj ty</h1>
                 </div>
             </div>
@@ -65,31 +31,31 @@
                 </div>
                 <div class="row">
                     <div class="col-25">
-                        <img src="./img/bread.jpg" class="menu-example-img expanding-img" alt="chlieb">
+                        <img src="../img/bread.jpg" class="menu-example-img expanding-img" alt="chlieb">
                         <h6 class="popis-produkta">Chlieb</h6>
                     </div>
                     <div class="col-25">
-                        <img src="./img/croissant.jpg" class="menu-example-img expanding-img" alt="croissant">
+                        <img src="../img/croissant.jpg" class="menu-example-img expanding-img" alt="croissant">
                         <h6 class="popis-produkta">Croissant</h6>
                     </div>
                     <div class="col-25">
-                        <img src="./img/cookie.jpg" class="menu-example-img expanding-img" alt="sušienka">
+                        <img src="../img/cookie.jpg" class="menu-example-img expanding-img" alt="sušienka">
                         <h6 class="popis-produkta">Sušienka</h6>
                     </div>
                     <div class="col-25">
-                        <img src="./img/cake.jpg" class="menu-example-img expanding-img" alt="torta">
+                        <img src="../img/cake.jpg" class="menu-example-img expanding-img" alt="torta">
                         <h6 class="popis-produkta">Torta</h6>
                     </div>
                 </div>
                 <div class="row">
-                    <a href="./menu.html" class="btn">Celé menu</a>
+                    <a href="../menu.html" class="btn">Celé menu</a>
                 </div>
             </div>
         </section>
         <!-- pop-up image -->
         <div class="pop-up-image">
             <span class="close-pop-up">&times;</span>
-            <img src="./img/bread.jpg" alt="Pop up image">
+            <img src="../img/bread.jpg" alt="Pop up image">
         </div>
         <!-- zoznam -->
         <section class="margin-top">
@@ -153,35 +119,6 @@
         </section>
     </main>
     <!-- footer -->
-    <footer>
-        <div class="container">
-            <div class="row justify-center test">
-                <div class="col-33 text-left">
-                    <h4>Kto sme</h4>
-                    <p>Sme neveľky tím ľudi, ktorý rád vypieka chutne veci. Našou úlohou je zabezpečit vsetckých ľudi dobrým pečivom a za skvelú cenu.</p>
-                </div>
-                <div class="col-33 text-center">
-                    <h4>Kontaktujte nás</h4>
-                    <p><i class="fa fa-envelope"></i><a href="mailto:nasapekaren@gmail.com">nasapekaren@gmail.com</a></p>
-                    <p><i class="fa fa-phone"></i><a href="phoneto:88005553535">88005553535</a></p>
-                </div>
-                <div class="col-33 text-right">
-                    <h4>Ryclé odkazy</h4>
-                    <ul>
-                        <li><p><a href="./index.html">Domov</a></p></li>
-                        <li><p><a href="./menu.html">Menu</a></p></li>
-                        <li><p><a href="./qna.html">Otázky</a></p></li>
-                        <li><p><a href="./kontakt.html">Kontakt</a></p></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-100 text-center">Copyright&copy;2023</div>
-            </div>
-        </div>
-    </footer>
-    <script src="./js/slider.js"></script>
-    <script src="./js/burger_menu.js"></script>
-    <script src="./js/pop-up-img.js"></script>
-</body>
-</html>
+<?php
+    include_once('./partials/footer.php');
+?>
