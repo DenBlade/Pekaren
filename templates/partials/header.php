@@ -1,7 +1,7 @@
 <?php
     require_once('../_inc/functions.php');
-    $main_pages = array('Domov' => 'home.php', 'Menu' => 'menu.php', 'Otázky' => 'qna.php', 'Kontakt' => 'kontakt.php');
-    $current_page_name = basename($_SERVER['SCRIPT_NAME'], '.php');
+    include_once('../_inc/classes/Page.php');
+    require_once('../_inc/important_variables.php');
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -11,13 +11,9 @@
     <meta name="description" content="Sme neveľky tím ľudi, ktorý rád vypieka chutne veci. Našou úlohou je zabezpečit vsetckých ľudi dobrým pečivom a za skvelú cenu.">
     <meta name="keywords" content="Pečivo, Zákusok, Torta, Naša pekáreň">
     <meta name="author" content="Klinkov Denys">
-    <title><?php echo "Naša pekáreň | ".basename($_SERVER['SCRIPT_NAME'], '.php'); ?></title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/banner.css">
-    <link rel="stylesheet" href="../css/navigation.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title><?php echo "Naša pekáreň | ".$page_object->get_page_name(); ?></title> <!--from important_variables.php--> 
     <?php
-        add_styles($current_page_name);
+        $page_object->add_styles(); // from important_variables.php
     ?>
 </head>
 <body>
@@ -32,7 +28,7 @@
             <nav class="main-nav">
                 <ul class="main-menu" id="main-menu">
                     <?php
-                        make_navigation_links($main_pages);
+                        $page_object->make_navigation_links($main_pages); //from important_variables.php
                     ?>
                 </ul>
                 <span class="hamburger" id="hamburger">

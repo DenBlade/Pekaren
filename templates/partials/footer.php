@@ -14,7 +14,7 @@
                     <h4>Ryclé odkazy</h4>
                     <ul>
                         <?php
-                            make_navigation_links($main_pages);
+                            $page_object->make_navigation_links($main_pages); //from important_variables.php
                         ?>
                     </ul>
                 </div>
@@ -26,7 +26,7 @@
     </footer>
     <script src="../js/burger_menu.js"></script>
     <?php
-        add_scripts($current_page_name);
+        $page_object->add_scripts();
     ?>
 </body>
 </html>
