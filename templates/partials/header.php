@@ -1,6 +1,5 @@
 <?php
     require_once('../_inc/functions.php');
-    include_once('../_inc/classes/Page.php');
     require_once('../_inc/important_variables.php');
 ?>
 <!DOCTYPE html>
@@ -28,7 +27,7 @@
             <nav class="main-nav">
                 <ul class="main-menu" id="main-menu">
                     <?php
-                        $page_object->make_navigation_links($main_pages); //from important_variables.php
+                        $menu_object->make_navigation_links(); //from important_variables.php
                     ?>
                 </ul>
                 <span class="hamburger" id="hamburger">

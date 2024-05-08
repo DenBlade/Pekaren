@@ -48,10 +48,5 @@
                     break;
                 }
         }
-        function make_navigation_links($link_array){
-            foreach($link_array as $page_name => $page_link){
-                echo '<li><a href="'.$page_link.'">'.$page_name.'</a></li>';
-            }
-        }
     }
 ?>
