@@ -107,6 +107,19 @@ p{
     box-shadow: 1px 5px 5px gray;
     transition: 0.3s;
 }
+.btn.white-purple{
+    background-color: white;
+    color: rgb(156, 1, 156);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: none;
+}
+.btn.white-purple:hover{
+    transform: none;
+    text-decoration: none;
+    background-color: rgb(225, 225, 225);
+    color: purple;
+}
 .btn:hover{
     transform: scale(1.1);
     background-color: purple;
@@ -115,7 +128,8 @@ p{
     margin-top: 80px;
     padding: 15px 30px;
 }
-#thank-you-img{
+
+.img-for-empty-space{
     width: 100%;
 }
 /* tabulka */

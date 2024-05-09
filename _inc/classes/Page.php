@@ -27,6 +27,13 @@
                     break;
                 case 'thankyou':
                     break;
+                case 'login':
+                    echo '<link rel="stylesheet" href="../css/form.css">';
+                    break;
+                case 'register':
+                    echo '<link rel="stylesheet" href="../css/form.css">';
+                    break;
+
             }
         }
         function add_scripts(){

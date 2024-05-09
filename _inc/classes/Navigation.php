@@ -1,5 +1,5 @@
 <?php
-    class Menu{
+    class Navigation{
         private $pages;
         public function __construct($pages_array)
         {

@@ -27,8 +27,9 @@
             <nav class="main-nav">
                 <ul class="main-menu" id="main-menu">
                     <?php
-                        $menu_object->make_navigation_links(); //from important_variables.php
+                        $navigation_object->make_navigation_links(); //from important_variables.php
                     ?>
+                    <li><a href="./login.php" class="btn white-purple">LOGIN</a></li>
                 </ul>
                 <span class="hamburger" id="hamburger">
                     <i class="fa fa-bars"></i>

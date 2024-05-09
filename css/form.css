@@ -15,6 +15,20 @@
     border: none;
     margin-top: 10px;
 }
+.standart-form input{
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    margin: 5px 2px;
+    border-radius: 15px;
+    border: 2px solid purple;
+    accent-color: purple;
+}
+.standart-form button{
+    border: none;
+    border-radius: 15px;
+    margin-top: 5px;
+}
 @media screen and (max-width:600px){
     #formular{
         text-align: left;

@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-50 text-right" id="formular">
                         <h2>Napíšte nám</h2>
-                        <form action="thankyou.html" id="contact">
+                        <form action="thankyou.php" id="contact">
                           <input type="text" placeholder="Vaše meno" id="meno" required> <br>
                           <input type="email" placeholder="Vaš email" id="email" required><br>
                           <textarea placeholder="Vaša sprava" id="sprava" cols="30" rows="10"></textarea><br>

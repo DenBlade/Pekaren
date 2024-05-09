@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <a href="../menu.html" class="btn">Celé menu</a>
+                    <a href="../templates/menu.php" class="btn">Celé menu</a>
                 </div>
             </div>
         </section>
