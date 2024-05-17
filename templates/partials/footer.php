@@ -14,7 +14,7 @@
                     <h4>Ryclé odkazy</h4>
                     <ul>
                         <?php
-                            $navigation_object->make_navigation_links(); //from important_variables.php
+                            $navigation_object->make_navigation_links(); //from config.php
                         ?>
                     </ul>
                 </div>

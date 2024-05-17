@@ -1,6 +1,6 @@
 <?php
     require_once('../_inc/functions.php');
-    require_once('../_inc/important_variables.php');
+    require_once('../_inc/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -10,9 +10,9 @@
     <meta name="description" content="Sme neveľky tím ľudi, ktorý rád vypieka chutne veci. Našou úlohou je zabezpečit vsetckých ľudi dobrým pečivom a za skvelú cenu.">
     <meta name="keywords" content="Pečivo, Zákusok, Torta, Naša pekáreň">
     <meta name="author" content="Klinkov Denys">
-    <title><?php echo "Naša pekáreň | ".$page_object->get_page_name(); ?></title> <!--from important_variables.php--> 
+    <title><?php echo "Naša pekáreň | ".$page_object->get_page_name(); ?></title> <!--from config.php--> 
     <?php
-        $page_object->add_styles(); // from important_variables.php
+        $page_object->add_styles(); // from config.php
     ?>
 </head>
 <body>
@@ -27,9 +27,10 @@
             <nav class="main-nav">
                 <ul class="main-menu" id="main-menu">
                     <?php
-                        $navigation_object->make_navigation_links(); //from important_variables.php
+                        $navigation_object->make_navigation_links(); //from config.php
+                        $navigation_object->login_button();
                     ?>
-                    <li><a href="./login.php" class="btn white-purple">LOGIN</a></li>
+                    
                 </ul>
                 <span class="hamburger" id="hamburger">
                     <i class="fa fa-bars"></i>

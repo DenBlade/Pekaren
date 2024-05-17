@@ -5,4 +5,7 @@
     $page_object = new Page($current_page_name);
     require_once('../_inc/classes/Navigation.php');
     $navigation_object = new Navigation($main_pages);
+    require_once('../_inc/classes/Database.php');
+    require_once('../_inc/classes/User.php');
+    session_start();
 ?>
