@@ -1,6 +1,7 @@
 <?php
-    include_once('./partials/header.php')
+    include_once('./partials/header.php');
 ?>
+
         <!-- banner -->
         <div class="banner">
             <img src="../img/banner.jpg" alt="banner">
@@ -29,7 +30,9 @@
                     </div>
                 </div>
             </div>
-            
+            <?php
+
+            ?>
         </section>
     </main>  
     <!-- footer -->

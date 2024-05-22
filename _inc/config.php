@@ -7,5 +7,6 @@
     $navigation_object = new Navigation($main_pages);
     require_once('../_inc/classes/Database.php');
     require_once('../_inc/classes/User.php');
+    require_once('../_inc/classes/Contact.php');
     session_start();
 ?>
