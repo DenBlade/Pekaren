@@ -5,6 +5,11 @@
             <div class="row">
                 <div class="col-50">
                     <h1>Ďakujeme za vyplnenie formulára</h1>
+                    <?php
+                        if($_POST){
+                            
+                        }
+                    ?>
                     <a href="./home.php" class="btn" id="thank-back-btn">Naspäť</a>
                 </div>
                 <div class="col-50">

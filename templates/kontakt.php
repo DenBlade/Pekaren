@@ -18,13 +18,13 @@
                     </div>
                     <div class="col-50 text-right" id="formular">
                         <h2>Napíšte nám</h2>
-                        <form action="thankyou.php" id="contact">
-                          <input type="text" placeholder="Vaše meno" id="meno" required> <br>
-                          <input type="email" placeholder="Vaš email" id="email" required><br>
-                          <textarea placeholder="Vaša sprava" id="sprava" cols="30" rows="10"></textarea><br>
+                        <form action="thankyou.php" id="contact" method="POST">
+                          <input type="text" placeholder="Vaše meno" id="meno" name="name" required> <br>
+                          <input type="email" placeholder="Vaš email" id="email" name="email" required><br>
+                          <textarea placeholder="Vaša sprava" id="sprava" cols="30" name="message" rows="10"></textarea><br>
                           <input type="checkbox" id="suhlas" required>
                           <label for="suhlas"><i>Súhlasim so spracovaním osobných údajov.</i></label><br>
-                          <input type="submit" value="Odoslať" class="btn" id="btn-submit">
+                          <input type="submit" name="contact_submitted" value="Odoslať" class="btn" id="btn-submit">
                         </form>
                     </div>
                 </div>

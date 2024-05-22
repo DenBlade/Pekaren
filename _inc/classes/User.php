@@ -7,11 +7,19 @@
         }
         public function register($email, $password){
             try{
-            $data = array('user_email' => $email, 'user_password' => md5($password), 'user_role' => 0);
-            $sql = "INSERT INTO users (email, password, role) VALUES (:user_email, :user_password, :user_role)";
+            $sql = "SELECT * FROM users WHERE email = ?";
             $query = $this->db->prepare($sql);
-            $query->execute($data);
-            return true;
+            $query->execute([$email]);
+            if($query->rowCount() == 1){
+                return false;
+            }
+            else{
+                $data = array('user_email' => $email, 'user_password' => md5($password), 'user_role' => 0);
+                $sql = "INSERT INTO users (email, password, role) VALUES (:user_email, :user_password, :user_role)";
+                $query = $this->db->prepare($sql);
+                $query->execute($data);
+                return true;
+                }
             }
             catch(PDOException $e){
                 echo "Chyba pri registracii: ".$e->getMessage();

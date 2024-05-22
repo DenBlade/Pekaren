@@ -16,8 +16,13 @@
                         $confirm_password = $_POST['confirm_password'];
                         if($password === $confirm_password){
                             $user_object = new User();
-                            $user_object->register($email, $password);
-                            header("Location: login.php");
+                            $register_succeeded = $user_object->register($email, $password);
+                            if($register_succeeded){
+                                header("Location: login.php");
+                            }
+                            else{
+                                echo "<b>Taký použivateľ už existuje</b><br><br>";
+                            }
                         }
                         else{
                             echo "<b>Hesla sa nezhoduju</b><br><br>";
