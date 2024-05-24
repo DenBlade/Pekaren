@@ -36,7 +36,7 @@
                     
                 if($user->password === md5($password)){
                     $_SESSION['is_logged_in'] = true;
-                    $_SESSION['is_admin'] = $query->fetch()->role;
+                    $_SESSION['is_admin'] = $user->role;
                     header('Location: home.php');
                     return true;
                 }

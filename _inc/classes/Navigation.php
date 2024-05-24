@@ -18,5 +18,10 @@
                 echo '<li><a href="./login.php" class="btn white-purple">LOGIN</a></li>';
             }
         }
+        function admin_link(){
+            if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] == true && $_SESSION['is_admin'] == 1){
+                echo '<li><a href="./admin.php" class="btn white-purple">Admin</a></li>';
+            }
+        }
     }
 ?>

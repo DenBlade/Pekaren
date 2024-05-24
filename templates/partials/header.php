@@ -28,6 +28,7 @@
                 <ul class="main-menu" id="main-menu">
                     <?php
                         $navigation_object->make_navigation_links(); //from config.php
+                        $navigation_object->admin_link();
                         $navigation_object->login_button();
                     ?>
                     
