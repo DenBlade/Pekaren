@@ -17,5 +17,6 @@
                 die("Chyba prepojenia k databaze: ".$e->getMessage());
             }
         } 
+        
     }
 ?>

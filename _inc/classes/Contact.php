@@ -15,5 +15,18 @@
                 echo $e->getMessage();
             }
         }
+        public function getRows(){
+            try{
+                $sql = "SELECT * FROM contacts";
+                $query = $this->db->query($sql);
+                return $query->rowCount();
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+            }
+        }
+        public function getName(){
+            return "Conctact";
+        }
     }
 ?>

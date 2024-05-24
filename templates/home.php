@@ -90,7 +90,7 @@
                 <div class="row">
                     <div class="col-100">
                         <!-- Tabuľka -->
-                        <table>
+                        <table class="table-classic">
                             <tr>
                                 <th>Bielkoviny</th>
                                 <th>Sacharidy</th>

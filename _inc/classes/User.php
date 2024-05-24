@@ -55,6 +55,61 @@
                     return false;
                 }
         }
+        public function getRows(){
+            try{
+                $sql = "SELECT * FROM users";
+                $query = $this->db->query($sql);
+                return $query->rowCount();
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+            }
+        }
+        public function content_mapping(){
+            try{
+                $sql = "SELECT user_id, email, role FROM users";
+                $query = $this->db->query($sql);
+                $rows = $query->fetchAll();
+                echo '<table class="table-horizontal">
+                        <tr>
+                            <th>email</th>
+                            <th>is_admin</th>
+                            <th>delete</th>
+                            <th>edit</th>
+                        <tr>';
+                for($i = 0; $i<count($rows); $i++){
+                    echo '<tr>';
+                    echo '<td>'.$rows[$i]->email.'</td>';
+                    echo '<td>'.$rows[$i]->role.'</td>';
+                    echo '<td>
+                            <form action ="" method="POST">
+                                <button type="submit" class="btn border-10 no-shadow no-transform no-border" name="delete_contact" value="'.$rows[$i]->user_id.'"'.'>Vymazať</button>
+                         </form>
+                        </td>';
+                    echo '<td>
+                        <form action="" method="POST">
+                          <button type="submit" class="btn border-10 no-shadow no-transform no-border" name="edit_contact" value="'.$rows[$i]->user_id.'"'.'>Editovať</button>
+                          </form>
+                      </td>';
+                    echo '</tr>';
+                }
+                echo '</table>';
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+            }
+
+        }
+        public function delete($id){
+            try{
+                $sql = "DELETE FROM users WHERE user_id = ?";
+                $query = $this->db->prepare($sql);
+                $query->execute([$id]);
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+            }
+        }
 
     }
 ?>

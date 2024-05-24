@@ -124,6 +124,18 @@ p{
     transform: scale(1.1);
     background-color: purple;
 }
+.no-shadow{
+    box-shadow: none;
+}
+.border-10{
+    border-radius: 10px;
+}
+.no-transform:hover{
+    transform: none;
+}
+.no-border{
+    border: none;
+}
 #thank-back-btn{
     margin-top: 80px;
     padding: 15px 30px;
@@ -133,14 +145,25 @@ p{
     width: 100%;
 }
 /* tabulka */
-table td, table th{
+.table-classic td, .table-classic th{
     border: 1px solid black;
     text-align: center;
     height: 50px;
     width: 150px;
 }
-table{
+.table-classic{
     border-collapse: collapse;
+}
+.table-horizontal{
+    background-color: white;
+    border-collapse: collapse;
+}
+.table-horizontal th, td{
+    border-top: 2px solid rgb(222, 226, 230);
+}
+.table-horizontal td, .table-horizontal th{
+    padding: 5px 10px;
+    text-align: center;
 }
 /* footer */
 footer{
