@@ -33,6 +33,9 @@
                 case 'register':
                     echo '<link rel="stylesheet" href="../css/form.css">';
                     break;
+                case 'update':
+                    echo '<link rel="stylesheet" href="../css/form.css">';
+                    break;
 
             }
         }

@@ -24,10 +24,26 @@
     border: 2px solid purple;
     accent-color: purple;
 }
+.edit-form{
+    border: 5px solid yellow;
+    padding: 30px 20px;
+    border-radius: 35px;
+}
+.edit-form input{
+    margin: 10px 0px;
+}
+.standart-form input[type=checkbox]{
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
 .standart-form button{
     border: none;
     border-radius: 15px;
     margin-top: 5px;
+}
+.edit-form button{
+    margin: 20px 0px;
 }
 @media screen and (max-width:600px){
     #formular{

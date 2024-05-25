@@ -66,6 +66,9 @@ p{
     margin-top: 10px;
     gap: 40px;
 }
+.content-center{
+    justify-content: center;
+}
 .col-100{
     width: 100%;
 }

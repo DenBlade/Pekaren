@@ -19,7 +19,7 @@
                                 $user_object->login($email, $password);
                             }
                         ?>
-                <form action="" id="register" method="POST" class="standart-form">
+                <form action="" method="POST" class="standart-form">
                         <label for="email"><i class="fa fa-envelope-o" aria-hidden="true"></i> EMAIL</label><br>
                           <input type="email" placeholder="Vaš email" name="email" value="<?= $email?>" required><br>
                           <label for="password"><i class="fa fa-lock" aria-hidden="true"></i> PASSWORD</label><br>

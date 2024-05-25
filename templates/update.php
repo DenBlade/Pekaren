@@ -7,27 +7,19 @@
     switch($table_name){
         case "User":
             $object = new User();
+            $id = $_POST['edit_user'];
             break;
     }
-    if(isset($_POST['delete'])) {
-        $object->delete($_POST['delete']);
-        header("Location: table.php?page=$table_name");
-    }  
-    if(isset($_POST['edit'])){
-        $object->edit();
-    }
-    
 ?>
     <div class="container">
             <div class="row">
                 <div class="col-100">
-                    <h1 class="text-center">Tabuľka <?=$table_name?></h1>
+                    <h1>Edit <?=$table_name?> instance</h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col-100">
                     <?php
-                    $object->content_mapping();
+                        $object->edit_interface($id);
                     ?>
                 </div>
             </div>

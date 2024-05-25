@@ -83,12 +83,12 @@
                     echo '<td>'.$rows[$i]->role.'</td>';
                     echo '<td>
                             <form action ="" method="POST">
-                                <button type="submit" class="btn border-10 no-shadow no-transform no-border" name="delete_contact" value="'.$rows[$i]->user_id.'"'.'>Vymazať</button>
+                                <button type="submit" class="btn border-10 no-shadow no-transform no-border" name="delete" value="'.$rows[$i]->user_id.'"'.'>Vymazať</button>
                          </form>
                         </td>';
                     echo '<td>
-                        <form action="" method="POST">
-                          <button type="submit" class="btn border-10 no-shadow no-transform no-border" name="edit_contact" value="'.$rows[$i]->user_id.'"'.'>Editovať</button>
+                        <form action="update.php?page=User" method="POST">
+                          <button type="submit" class="btn border-10 no-shadow no-transform no-border" name="edit_user" value="'.$rows[$i]->user_id.'"'.'>Editovať</button>
                           </form>
                       </td>';
                     echo '</tr>';
@@ -110,6 +110,30 @@
                 echo $e->getMessage();
             }
         }
-
+        public function edit_interface($id){
+            $sql = "SELECT email, role FROM users WHERE user_id = ?";
+            $query = $this->db->prepare($sql);
+            $query->execute([$id]);
+            $user = $query->fetch();
+            echo '<form action="table.php?page=User" method="POST" class="standart-form edit-form">
+            <label for="email">EMAIL</label><br>
+              <input type="email" name="edit_email" value="'.$user->email.'" required><br>
+              <input type="checkbox" name="edit_role" id="role"';
+              echo $user->role == 1 ? "checked" : "";
+              echo '>
+              <label for="role">is_admin</label><br>
+              <button type="submit" name="edit" class="btn no-border" value="'.$id.'">Submit</button>
+            </form>';
+        }
+        public function edit(){
+            $sql = "UPDATE users SET email = :email, role = :role WHERE user_id = :user_id";
+            $query = $this->db->prepare($sql);
+            if(isset($_POST['edit_role'])){
+                $role = 1;
+            }
+            else $role = 0;
+            $data = array("email" => $_POST['edit_email'], "role" => $role, "user_id" => $_POST['edit']);
+            $query->execute($data);
+        }
     }
 ?>
