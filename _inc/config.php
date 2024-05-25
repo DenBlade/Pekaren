@@ -9,5 +9,6 @@
     require_once('../_inc/classes/User.php');
     require_once('../_inc/classes/Contact.php');
     require_once('../_inc/classes/Qna.php');
+    require_once('../_inc/classes/Menu.php');
     session_start();
 ?>

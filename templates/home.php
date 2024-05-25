@@ -31,19 +31,19 @@
                 </div>
                 <div class="row">
                     <div class="col-25">
-                        <img src="../img/bread.jpg" class="menu-example-img expanding-img" alt="chlieb">
+                        <img src="../img/menu_img/bread.jpg" class="menu-example-img expanding-img" alt="chlieb">
                         <h6 class="popis-produkta">Chlieb</h6>
                     </div>
                     <div class="col-25">
-                        <img src="../img/croissant.jpg" class="menu-example-img expanding-img" alt="croissant">
+                        <img src="../img/menu_img/croissant.jpg" class="menu-example-img expanding-img" alt="croissant">
                         <h6 class="popis-produkta">Croissant</h6>
                     </div>
                     <div class="col-25">
-                        <img src="../img/cookie.jpg" class="menu-example-img expanding-img" alt="sušienka">
+                        <img src="../img/menu_img/cookie.jpg" class="menu-example-img expanding-img" alt="sušienka">
                         <h6 class="popis-produkta">Sušienka</h6>
                     </div>
                     <div class="col-25">
-                        <img src="../img/cake.jpg" class="menu-example-img expanding-img" alt="torta">
+                        <img src="../img/menu_img/cake.jpg" class="menu-example-img expanding-img" alt="torta">
                         <h6 class="popis-produkta">Torta</h6>
                     </div>
                 </div>

@@ -6,6 +6,7 @@
     $user_object = new User();
     $contact_object = new Contact();
     $qna_object = new Qna();
+    $menu_object = new Menu();
 ?>
         <div class="container">
             <div class="row">
@@ -21,12 +22,8 @@
                 <div class="row">
                     <div class="col-100">
                     <table class="table-horizontal">
-                        <tr>
-                            <th>Menu</th>
-                            <td>Počet záznamov:</td>
-                            <td><a class="btn border-10 no-shadow no-transform">Upraviť</a></td>
-                        </tr>
                         <?php
+                            $navigation_object->admin_table($menu_object);
                             $navigation_object->admin_table($contact_object);
                             $navigation_object->admin_table($qna_object);
                             $navigation_object->admin_table($user_object);
