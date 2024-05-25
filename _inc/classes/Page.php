@@ -56,6 +56,8 @@
                     break;
                 case 'thankyou':
                     break;
+                case 'update':
+                    echo '<script src="../js/select_image_change.js"></script>';
                 }
         }
     }

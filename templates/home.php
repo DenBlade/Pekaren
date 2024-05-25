@@ -55,7 +55,7 @@
         <!-- pop-up image -->
         <div class="pop-up-image">
             <span class="close-pop-up">&times;</span>
-            <img src="../img/bread.jpg" alt="Pop up image">
+            <img src="../img/menu_img/bread.jpg" alt="Pop up image">
         </div>
         <!-- zoznam -->
         <section class="margin-top">

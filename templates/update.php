@@ -9,6 +9,10 @@
             $object = new User();
             $id = $_POST['edit_user'];
             break;
+        case "Menu":
+            $object = new Menu();
+            $id = $_POST['edit_menu'];
+            break;
     }
 ?>
     <div class="container">

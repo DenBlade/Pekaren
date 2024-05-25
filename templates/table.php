@@ -8,6 +8,9 @@
         case "User":
             $object = new User();
             break;
+        case "Menu":
+            $object = new Menu();
+            break;
     }
     if(isset($_POST['delete'])) {
         $object->delete($_POST['delete']);
