@@ -93,9 +93,9 @@
         public function create_interface(){
             echo '<form action="table.php?page=Qna" method="POST" class="standart-form edit-form">
             <label for="question">Question</label><br>
-            <textarea name="create_question" cols="30" rows="10" required></textarea><br>
+            <textarea name="create_question" placeholder="Question" cols="30" rows="10" required></textarea><br>
             <label for="answer">Answer</label><br>
-            <textarea name="create_answer" cols="30" rows="10"required></textarea><br>
+            <textarea name="create_answer" placeholder="Answer" cols="30" rows="10"required></textarea><br>
             <button type="submit" name="create" class="btn no-border">Submit</button>
             </form>';
         }

@@ -132,7 +132,7 @@
         $dir = '/pekaren/img/menu_img/';
         echo '<form action="table.php?page=Menu" method="POST" class="standart-form edit-form" enctype="multipart/form-data">
         <label for="name">Názov</label><br>
-          <input type="text" name="create_name" required><br>
+          <input type="text" placeholder="Názov" name="create_name" required><br>
           <label for="images">Select image from existed</label><br>
           <select name="images" id="images">';
         for($i = 0; $i<count($url_array); $i++){
@@ -142,7 +142,7 @@
         echo '<label for="load_img">Or load a new one</label><br>';
         echo '<input type="file" name="load_img" id="load_img" accept="image/*"><br>';
         echo '<label for="create_price">Cena</label><br>';
-        echo '<input type="text" name="create_price" required><br>';
+        echo '<input type="text" placeholder="Cena" name="create_price" required><br>';
         echo '<img src="'.$dir.basename($url_array[0]).'" id="prewiew-image" width=500><br>';
         echo  '<button type="submit" name="create" class="btn no-border">Submit</button>
         </form>';

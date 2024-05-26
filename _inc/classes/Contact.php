@@ -96,11 +96,11 @@
         public function create_interface(){
             echo '<form action="table.php?page=Contact" method="POST" class="standart-form edit-form">
             <label for="name">Name</label><br>
-            <input type="text" name="create_name" required><br>
+            <input type="text" placeholder="Meno" name="create_name" required><br>
             <label for="email">EMAIL</label><br>
-              <input type="email" name="create_email" required><br>
+              <input type="email" placeholder="Email" name="create_email" required><br>
               <label for="message">Message</label><br>
-              <textarea id="message" cols="30" name="create_message" rows="10"></textarea><br>
+              <textarea id="message" placeholder="Message" cols="30" name="create_message" rows="10"></textarea><br>
               <button type="submit" name="create" class="btn no-border">Submit</button>
             </form>';
         }
