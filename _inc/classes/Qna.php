@@ -26,5 +26,69 @@
                 echo $e->getMessage();
             }
         }
+        public function content_mapping(){
+            try{
+                $sql = "SELECT * FROM qna";
+                $query = $this->db->query($sql);
+                $rows = $query->fetchAll();
+                echo '<table class="table-horizontal">
+                        <tr>
+                            <th>question</th>
+                            <th>answer</th>
+                            <th>delete</th>
+                            <th>edit</th>
+                        <tr>';
+                for($i = 0; $i<count($rows); $i++){
+                    echo '<tr>';
+                    echo '<td>'.$rows[$i]->question.'</td>';
+                    echo '<td>'.$rows[$i]->answer.'</td>';
+                    echo '<td>
+                            <form action ="" method="POST">
+                                <button type="submit" class="btn border-10 no-shadow no-transform no-border" name="delete" value="'.$rows[$i]->qna_id.'"'.'>Vymazať</button>
+                         </form>
+                        </td>';
+                    echo '<td>
+                        <form action="update.php?page=Qna" method="POST">
+                          <button type="submit" class="btn border-10 no-shadow no-transform no-border" name="edit_qna" value="'.$rows[$i]->qna_id.'"'.'>Editovať</button>
+                          </form>
+                      </td>';
+                    echo '</tr>';
+                }
+                echo '</table>';
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+            }
+
+        }
+        public function delete($id){
+            try{
+                $sql = "DELETE FROM qna WHERE qna_id = ?";
+                $query = $this->db->prepare($sql);
+                $query->execute([$id]);
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+            }
+        }
+        public function edit_interface($id){
+            $sql = "SELECT question, answer FROM qna WHERE qna_id = ?";
+            $query = $this->db->prepare($sql);
+            $query->execute([$id]);
+            $user = $query->fetch();
+            echo '<form action="table.php?page=Qna" method="POST" class="standart-form edit-form">
+            <label for="question">Question</label><br>
+            <textarea name="edit_question" cols="30" rows="10" required>'.$user->question.'</textarea><br>
+            <label for="answer">Answer</label><br>
+            <textarea name="edit_answer" cols="30" rows="10"required>'.$user->answer.'</textarea><br>
+            <button type="submit" name="edit" class="btn no-border" value="'.$id.'">Submit</button>
+            </form>';
+        }
+        public function edit(){
+            $sql = "UPDATE qna SET question = :question, answer = :answer WHERE qna_id = :qna_id";
+            $query = $this->db->prepare($sql);
+            $data = array("question" => $_POST['edit_question'], "answer" => $_POST['edit_answer'], "qna_id" => $_POST['edit']);
+            $query->execute($data);
+        }
     }
 ?>

@@ -13,6 +13,14 @@
             $object = new Menu();
             $id = $_POST['edit_menu'];
             break;
+        case "Contact":
+            $object = new Contact();
+            $id = $_POST['edit_contact'];
+            break;
+        case "Qna":
+            $object = new Qna();
+            $id = $_POST['edit_qna'];
+            break;
     }
 ?>
     <div class="container">

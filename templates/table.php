@@ -11,6 +11,12 @@
         case "Menu":
             $object = new Menu();
             break;
+        case "Contact":
+            $object = new Contact();
+            break;
+        case "Qna":
+            $object = new Qna();
+            break;
     }
     if(isset($_POST['delete'])) {
         $object->delete($_POST['delete']);
