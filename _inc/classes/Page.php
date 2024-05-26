@@ -57,7 +57,7 @@
                 case 'thankyou':
                     break;
                 case 'update':
-                    echo '<script src="../js/select_image_change.js"></script>';
+                    echo '<script src="../js/prewiew_image.js"></script>';
                 }
         }
     }

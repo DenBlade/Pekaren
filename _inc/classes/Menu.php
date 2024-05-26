@@ -91,10 +91,10 @@
         $img_url = basename($object->pic_url);
         $url_array = $this->get_images_url();
         $dir = '/pekaren/img/menu_img/';
-        echo '<form action="table.php?page=Menu" method="POST" class="standart-form edit-form">
+        echo '<form action="table.php?page=Menu" method="POST" class="standart-form edit-form" enctype="multipart/form-data">
         <label for="name">Názov</label><br>
           <input type="text" name="edit_name" value="'.$object->name.'" required><br>
-          <label for="images">Image</label><br>
+          <label for="images">Select image from existed</label><br>
           <select name="images" id="images">
             <option value="'.$dir.$img_url.'">'.$img_url.'</option>';
         for($i = 0; $i<count($url_array); $i++){
@@ -102,6 +102,8 @@
             echo '<option value="'.$dir.basename($url_array[$i]).'">'.basename($url_array[$i]).'</option>';
         }
         echo  '</select><br>';
+        echo '<label for="load_img">Or load a new one</label><br>';
+        echo '<input type="file" name="load_img" id="load_img" accept="image/*"><br>';
         echo '<label for="edit_price">Cena</label><br>';
         echo '<input type="text" name="edit_price" value="'.$object->price.'" required><br>';
         echo '<img src="'.$dir.$img_url.'" id="prewiew-image" width=500><br>';
@@ -111,7 +113,18 @@
     public function edit(){
         $sql = "UPDATE menu SET name = :name, pic_url = :url, price = :price WHERE menu_id = :id";
         $query = $this->db->prepare($sql);
-        $data = array("name" => $_POST['edit_name'], "url" => $_POST['images'], "price"=> $_POST['edit_price'], "id" => $_POST['edit']);
+        $url = $_POST['images'];
+        if(isset($_FILES)){
+            $extFile = explode("/", $_FILES['load_img']['type'])[0];
+            if($extFile == "image"){
+                $uploaddir = '../img/menu_img/';
+                $uploadfile = $uploaddir . basename($_FILES['load_img']['name']);
+                move_uploaded_file($_FILES['load_img']['tmp_name'], $uploadfile);
+                $url = $uploadfile;
+            }
+
+        }
+        $data = array("name" => $_POST['edit_name'], "url" => $url, "price"=> $_POST['edit_price'], "id" => $_POST['edit']);
         $query->execute($data);
     }
 }
