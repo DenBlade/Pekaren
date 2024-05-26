@@ -90,5 +90,25 @@
             $data = array("question" => $_POST['edit_question'], "answer" => $_POST['edit_answer'], "qna_id" => $_POST['edit']);
             $query->execute($data);
         }
+        public function create_interface(){
+            echo '<form action="table.php?page=Qna" method="POST" class="standart-form edit-form">
+            <label for="question">Question</label><br>
+            <textarea name="create_question" cols="30" rows="10" required></textarea><br>
+            <label for="answer">Answer</label><br>
+            <textarea name="create_answer" cols="30" rows="10"required></textarea><br>
+            <button type="submit" name="create" class="btn no-border">Submit</button>
+            </form>';
+        }
+        public function create(){
+            try{
+            $sql = "INSERT INTO qna (question, answer) VALUES (:question, :answer)";
+            $data = array("question" => $_POST['create_question'], "answer" => $_POST['create_answer']);
+            $query = $this->db->prepare($sql);
+            $query->execute($data);
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+            }
+        }
     }
 ?>

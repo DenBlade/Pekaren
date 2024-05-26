@@ -127,5 +127,48 @@
         $data = array("name" => $_POST['edit_name'], "url" => $url, "price"=> $_POST['edit_price'], "id" => $_POST['edit']);
         $query->execute($data);
     }
-}
+    public function create_interface(){
+        $url_array = $this->get_images_url();
+        $dir = '/pekaren/img/menu_img/';
+        echo '<form action="table.php?page=Menu" method="POST" class="standart-form edit-form" enctype="multipart/form-data">
+        <label for="name">Názov</label><br>
+          <input type="text" name="create_name" required><br>
+          <label for="images">Select image from existed</label><br>
+          <select name="images" id="images">';
+        for($i = 0; $i<count($url_array); $i++){
+            echo '<option value="'.$dir.basename($url_array[$i]).'">'.basename($url_array[$i]).'</option>';
+        }
+        echo  '</select><br>';
+        echo '<label for="load_img">Or load a new one</label><br>';
+        echo '<input type="file" name="load_img" id="load_img" accept="image/*"><br>';
+        echo '<label for="create_price">Cena</label><br>';
+        echo '<input type="text" name="create_price" required><br>';
+        echo '<img src="'.$dir.basename($url_array[0]).'" id="prewiew-image" width=500><br>';
+        echo  '<button type="submit" name="create" class="btn no-border">Submit</button>
+        </form>';
+    }
+    public function create(){
+        try{
+            $sql = "INSERT INTO menu (name, pic_url, price) VALUES (:name, :pic_url, :price)";
+            $url = $_POST['images'];
+            if(isset($_FILES)){
+                $extFile = explode("/", $_FILES['load_img']['type'])[0];
+                if($extFile == "image"){
+                    $uploaddir = '../img/menu_img/';
+                    $uploadfile = $uploaddir . basename($_FILES['load_img']['name']);
+                    move_uploaded_file($_FILES['load_img']['tmp_name'], $uploadfile);
+                    $url = $uploadfile;
+                }
+    
+            }
+            $data = array("name" => $_POST['create_name'], "pic_url" => $url, "price"=> $_POST['create_price']);
+            $query = $this->db->prepare($sql);
+            $query->execute($data);
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+            }
+        }
+    }
+
 ?>

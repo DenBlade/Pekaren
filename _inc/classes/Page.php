@@ -36,6 +36,9 @@
                 case 'update':
                     echo '<link rel="stylesheet" href="../css/form.css">';
                     break;
+                case 'create':
+                    echo '<link rel="stylesheet" href="../css/form.css">';
+                    break;
 
             }
         }
@@ -58,6 +61,10 @@
                     break;
                 case 'update':
                     echo '<script src="../js/prewiew_image.js"></script>';
+                    break;
+                case 'create':
+                    echo '<script src="../js/prewiew_image.js"></script>';
+                    break;
                 }
         }
     }

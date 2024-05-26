@@ -93,5 +93,27 @@
             $data = array("email" => $_POST['edit_email'], "name" => $_POST['edit_name'], "message" => $_POST['edit_message'], "user_id" => $_POST['edit']);
             $query->execute($data);
         }
+        public function create_interface(){
+            echo '<form action="table.php?page=Contact" method="POST" class="standart-form edit-form">
+            <label for="name">Name</label><br>
+            <input type="text" name="create_name" required><br>
+            <label for="email">EMAIL</label><br>
+              <input type="email" name="create_email" required><br>
+              <label for="message">Message</label><br>
+              <textarea id="message" cols="30" name="create_message" rows="10"></textarea><br>
+              <button type="submit" name="create" class="btn no-border">Submit</button>
+            </form>';
+        }
+        public function create(){
+            try{
+                $sql = "INSERT INTO contacts (name, email, message) VALUES (:name, :email, :message)";
+                $data = array("email" => $_POST['create_email'], "name" => $_POST['create_name'], "message" => $_POST['create_message']);
+                $query = $this->db->prepare($sql);
+                $query->execute($data);
+                }
+                catch(PDOException $e){
+                    echo $e->getMessage();
+                }
+        }
     }
 ?>

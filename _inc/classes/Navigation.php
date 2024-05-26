@@ -28,6 +28,7 @@
                         <th>'.get_class($object).'</th>
                         <td>Počet záznamov: '.$object->getRows().'</td>
                         <td><a class="btn border-10 no-shadow no-transform" href="./table.php?page='.get_class($object).'">Upraviť</a></td>
+                        <td><a class="btn border-10 no-shadow no-transform" href="./create.php?page='.get_class($object).'">Add new</a></td>
                     </tr>';
         }
     }
